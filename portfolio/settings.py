@@ -12,11 +12,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-from environs import Env
 import os
+from environs import Env
 
 env = Env()
 env.read_env()
+import dj_database_url 
 
 # load_dotenv() 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -100,17 +101,18 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     "default":env.dj_db_url('DATABASE_URL')
+# }
+
+
+
 DATABASES = {
-    "default":env.dj_db_url('DATABASE_URL')
+
+    "default": dj_database_url.parse(env('DATABASE_URL'))
+
 }
 
-import dj_database_url 
-
-# DATABASES = {
-
-#     "default": dj_database_url.parse('')
-
-# }
 
 # DATABASES = {
 #     'default': {
