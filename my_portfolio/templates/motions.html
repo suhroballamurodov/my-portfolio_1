@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static%} 
+
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon" sizes="48x48">
+    <title>Motions</title>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 100px;"> Biz qilgan Motion dizaynlar bilan tanishing</h1>
+    <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="margin: 50px 0 100px 400px;">
+        <div class="portfolio-wrap">
+          <img src="{% static 'assets/video/videos.MP4'%}" class="img-fluid" alt="">
+          <video src=" {% static 'assets/video/video.MP4'%} " autoplay></video>
+          <div class="portfolio-links">
+            <a href="{% static 'assets/img/portfolio/math.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+            <a href="{% url 'portfolio_details' %}" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2> Telegram bot </h2>
+          <ol>
+            <li><a href="{% url 'main' %}">Bosh sahifa</a></li>
+            <li>Telegram bot</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                <h2><a href="https://t.me/weatherbotn17_suhrob_bot"> Ob-havo bot </a></h2>
+                    <img src="{% static 'assets/img/portfolio/ob-havo.jpg' %}" style="height: 600px; width:600px; border-radius: 5%;">
+                </div>
+
+                <div class="swiper-slide">
+                    <h2><a href="https://t.me/imtihon_suhrobbot"> Wikipedia bot </a></h2>
+                  <img src="{% static 'assets/img/portfolio/wikipedia 1.png' %}"  style="height: 600px; width:550px; border-radius: 5%; border: 1px solid black;">
+                </div>
+
+                <div class="swiper-slide">
+                    <h2><a href="https://t.me/imtihon_suhrobbot"> Quiz bot </a></h2>
+                  <img src="{% static 'assets/img/portfolio/wikipedia 1.png' %}"  style="height: 600px; width:550px; border-radius: 5%; border: 1px solid black;">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="col-lg-5" style="margin: 100px 0 0 50px;">
+            <div class="portfolio-info">
+              <h3>Proyekt haqida ma'lumot</h3>
+              <h2></h2>
+              <ul>
+                <li><strong>Yo'nalish</strong>: Telegram bot</li>
+                <li><strong>Mijoz</strong>: Shaxsiy</li>
+                <li><strong>Proyekt vaqti</strong>: Dekabr, 2023</li>
+                <li><strong>Ob-havo bot manzili</strong>: <a href="https://t.me/weatherbotn17_suhrob_bot">Botdan foydalanish</a></li>
+                <li><strong>Wikipedia bot manzili</strong>: <a href="https://t.me/imtihon_suhrobbot">Botdan foydalanish</a></li>
+                <li><strong>Matematikaadan quiz bot manzili</strong>: <a href="https://t.me/imtihon_suhrobbot">Botdan foydalanish</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Bu yerdan telegram botlar haqida to'liq ma'lumot oling</h2>
+              <li><b> Ob-havo ma'lumotlarini qaytaruvchi bot: </b></li><br>
+              <p>
+                1. Foydalanuvchi tomonidan kiritilgan shahar asosida u yerda hozir ob-havo qanday, necha gradus, kiritilgan shahar qaysi davlatda joylashgan, osmon qanaqa(bululi, yomg'irli, quyoshli, tumanli va hk) shu kabi ma'lumotlarni qaytaruvchi bot.
+              </p>
+              <li><b> Wikipedidan ma'lumotlar qaytaruvchi bot: </b></li><br>
+              <p>
+                2. Foydalanuvchi tomonidan kiritilgan so'z asosida wikipediadan ma'lumotlarni qaytaruvchi telegram bot.
+              </p>
+              <li><b> Matematikadan testlar beruvchi bot: </b></li><br>
+              <p>
+                3. Matematikadan savollarni foydalanuvchiga taqdim etuvchi telegram bot.
+              </p>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock %}
+</body>
+
+</html>
