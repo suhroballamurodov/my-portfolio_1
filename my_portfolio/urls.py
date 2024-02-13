@@ -5,8 +5,8 @@ from rest_framework import routers
 
 
 
-router = routers.DefaultRouter()
-router.register(r'posts', PostViewSet)
+# router = routers.DefaultRouter()
+# router.register(r'posts', PostViewSet)
 
 
 urlpatterns = [
@@ -17,5 +17,5 @@ urlpatterns = [
     path('telegram_bot/', views.telegram, name='telegram_bot'),
     path('web/', views.web, name='web'),
     path('motions', views.motions, name='motions'),
-    path('api/', include(router.urls)),  #API uchun link
+    # path('api/', include(router.urls)),  #API uchun link
 ] 

@@ -45,14 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    #tashqi kutubxonalar
     'whitenoise.runserver_nostatic',
-    
     'rest_framework',  #API uchun
-    'my_portfolio.apps.MyPortfolioConfig',
-    
     'crispy_forms',   #contact uchun forma
-
+    'widget_tweaks',
+    #my app
+    'my_portfolio.apps.MyPortfolioConfig',
 ]
 
 MIDDLEWARE = [
@@ -107,19 +106,19 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
 
-DATABASES = {
-
-    "default": dj_database_url.parse(env('DATABASE_URL'))
-
-}
-
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
+
+#     "default": dj_database_url.parse(env('DATABASE_URL'))
+
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation

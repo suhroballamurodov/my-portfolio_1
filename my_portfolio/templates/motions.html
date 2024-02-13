@@ -1,27 +1,66 @@
 {% extends 'base.html' %}
-
-{% load static%} 
-
+{% load static %}
 {% block content %}
-<!DOCTYPE html>
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <marquee direction="left"><h1 style="color: #149ddd ;">Portfolio Details</h1></marquee>
+          <ol>
+            <li><a href="{% url 'main' %}">Bosh sahifa</a></li>
+            <li>Portfoio Details</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
 
-<html lang="en">
-<head>
-    <link href="{% static 'assets/img/favicon.png' %}" rel="icon" sizes="48x48">
-    <title>Motions</title>
-</head>
-<body>
-    <h1 style="text-align: center; margin-top: 100px;"> Biz qilgan Motion dizaynlar bilan tanishing</h1>
-    <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="margin: 50px 0 100px 400px;">
-        <div class="portfolio-wrap">
-          <img src="{% static 'assets/video/videos.MP4'%}" class="img-fluid" alt="">
-          <video src=" {% static 'assets/video/video.MP4'%} " autoplay></video>
-          <div class="portfolio-links">
-            <a href="{% static 'assets/img/portfolio/math.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-            <a href="{% url 'portfolio_details' %}" title="More Details"><i class="bx bx-link"></i></a>
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <video src="static/asset/video/Pizza_Animated.mp4" type="mp4" alt="A"> A </video>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Proyektlar haqida ma'lumot</h3>
+              <ul>
+                <li><strong>Yo'nalish</strong>: Web Applications</li>
+                <li><strong>Mijoz</strong>: Logistic company </li>
+                <li><strong>Proyekt vaqti</strong>: 2023-yil </li>
+                <li><strong>Proyekt manzili</strong>: <a href="http://t.me/suhroballamurodov_portfolio"> My Portfolio </a></li>
+              </ul>
+            </div>
+
+            <div class="portfolio-description">
+              <h2>Logistika kompaniyalari uchun tayyorlangan veb saytlar haqida to'liq ma'lumot oling</h2>
+              <p>
+                Mijoz tomonida berilgan shart yuzasidan tayyorlangan Veb sayt
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
 {% endblock %}
+<video src="{% static 'asset/video/Pizza_Animated.mp4' %}" ></video>
 </body>
 </html>

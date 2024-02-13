@@ -12,33 +12,6 @@ from rest_framework import viewsets, generics
 from django.views.decorators.csrf import csrf_protect
 
 
-
-# API uchun
-
-@api_view(['GET', 'POST'])
-def get(request):
-    if request.method == 'GET':
-        post = Post.objects.all()
-    # app = ContactModel.objects.all()
-        serializer = DataSerializer(post, many=True)
-    return Response(serializer.data)
-
-
-class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
- 
-
-
-@api_view(['POST'])
-def updateDataOne(request, pk):
-    post = Post.objects.get(id=pk)
-    serializers = DataSerializer(post, data=request.data)
-    if serializers.is_valid():
-        serializers.save()
-    return Response(serializers.data)
-
-
 def portfolio_details(request):
     return render(request, 'portfolio_details.html', {})
 
@@ -55,22 +28,55 @@ def motions(request):
     return render(request, 'motions.html', {})
 
 
-@csrf_protect
+# @csrf_protect
+# def contact(request):
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('contact_success')
+#     else:
+#         form = ContactForm()
+#     return render(request, 'contact.html', {'form': form})
+
+
 def contact(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
+        contact_form = ContactForm(request.POST, request.FILES)
+        if contact_form.is_valid():
+            information = contact_form.save()
             return redirect('contact_success')
-    else:
-        form = ContactForm()
-    return render(request, 'contact.html', {'form': form})
+    form = ContactForm()
+    return render(request, "contact.html", {'form':form})
+
 
 def contact_success(request):
     return render(request, 'contact_success.html')
 
 
+# @api_view(['POST'])
+# def updateDataOne(request, pk):
+#     post = Post.objects.get(id=pk)
+#     serializers = DataSerializer(post, data=request.data)
+#     if serializers.is_valid():
+#         serializers.save()
+#     return Response(serializers.data)
 
+# API uchun
+
+# @api_view(['GET', 'POST'])
+# def get(request):
+#     if request.method == 'GET':
+#         post = Post.objects.all()
+#     # app = ContactModel.objects.all()
+#         serializer = DataSerializer(post, many=True)
+#     return Response(serializer.data)
+
+
+# class PostViewSet(viewsets.ModelViewSet):
+#     queryset = Post.objects.all()
+#     serializer_class = PostSerializer
+ 
 
 
 ''' Bu ikkinchi yo'l'''

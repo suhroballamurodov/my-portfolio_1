@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-
+{% load widget_tweaks %}
 {% load static %}
-
 {% block content %}
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -207,13 +206,26 @@
             <h3 class="resume-title">Faoliyatim</h3>
             <div class="resume-item pb-0">
               <h4>Grafik dizayner</h4>
+              <h5>2020 - 2023</h5>
               <p><em>Urfon academy, Boston academy va Nurli kelajak kabi o'quv markazlar bilan hamorlikda 2 yillik Grafik dizaynerlik bo'yicha real loyihalardagi ishlar. Ijtimoiy tarmoqlar uchun post, tashqi reklama uchun banner va reklama roliklarini yaratish.</em></p>
               <ul>
                 <li>Sartepo-GUM, Samarqand, O'zbekiston</li>
                 <li>+998 99 071 2937</li>
                 <li>alvaliyev@gmail.com</li>
               </ul>
+              <br>
             </div>
+            <div class="resume-item">
+              <h4>Dizayner</h4>
+              <h5>2020 - 2023</h5>
+              <p><em>Grafik dizayner, Samarqand, O'zbekiston</em></p>
+              <ul>
+                <li>Grafik va Motion dizayner, SMM, Targetolog, (Logotip, brashura, infografika, prezentatsiya, motion rolik).</li>
+                <li> 3+ O'quv markaz, 100 ga yaqin ishlar</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Ta'lim</h3>
             <div class="resume-item">
               <h4>Bakalavr daraja &amp; Turizm sohasida loyihalash</h4>
@@ -224,8 +236,7 @@
               <li>Turizm marketing</li> 
               <li>Turizm menejmenti</li>
             </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            
             <h3 class="resume-title">Professional daraja</h3>
             <div class="resume-item">
               <h4>Web dasturchi</h4>
@@ -235,16 +246,7 @@
                 <li>Python - Django Backend dasturchi </li>
                 <li>8 oylik maxsus o'quv kurs</li>
                 <li>8+ Web sayt</li>
-                <li>Byudjet $100 - $1,500</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Dizayner</h4>
-              <h5>2020 - 2023</h5>
-              <p><em>Grafik dizayner, Samarqand, O'zbekiston</em></p>
-              <ul>
-                <li>Grafik va Motion dizayner, SMM, Targetolog, (Logotip, brashura, infografika, prezentatsiya, motion rolik).</li>
-                <li> 3+ O'quv markaz, 100 ga yaqin ishlar</li>
+                <li>Byudjet $300 - $1,500</li>
               </ul>
             </div>
           </div>
@@ -358,11 +360,19 @@
               <li>Blog sayt</li>
               <li>Portfoliya sayt</li>
             </p>
-
+          </div>
+          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-robot"></i></div>
+            <h4 class="title"><a href="{% url 'telegram_bot' %}"> Telegram bot yaratish</a></h4>
+            <p class="description"><br>
+              <li>Sotuv bot</li>
+              <li>Chat bot</li>
+              <li>Turli vazifalarni bajaruvchi bot</li>
+            </p>
           </div>
           <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-image"></i></div>
-            <h4 class="title"><a href="#"> Grafik dizayn xizmati </a></h4>
+            <h4 class="title"><a href="http://t.me/suhroballamurodov_portfolio"> Grafik dizayn xizmati </a></h4>
             <p class="description"><br>
               <li>Tashqi reklama</li>
               <li>Poligrafiya</li>
@@ -375,15 +385,6 @@
             <p class="description"><br>
               <li>Logo animatsiya</li>
               <li>Ijtimoiy tarmoqlar uchun rolik</li>
-            </p>
-          </div>
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-robot"></i></div>
-            <h4 class="title"><a href="{% url 'telegram_bot' %}"> Telegram bot yaratish</a></h4>
-            <p class="description"><br>
-              <li>Sotuv bot</li>
-              <li>Chat bot</li>
-              <li>Turli vazifalarni bajaruvchi bot</li>
             </p>
           </div>
         </div>
@@ -407,7 +408,7 @@
               <div class="testimonial-item" data-aos="fade-up">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Sukhrob Allamurodov bilan 2 yildan oshiqroq vaqt ishlaganman. Berilgan proyektlarni o'z vaqtida topshirilgan 
+                  Sukhrob Allamurodov bilan 3 yildan oshiqroq vaqt ishlaganman. Proyektlarni o'z vaqtida topshirilgan 
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
@@ -462,8 +463,8 @@
       </div>
     </section><!-- End Testimonials Section -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+     <!-- ======= Contact Section ======= -->
+     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
@@ -509,16 +510,17 @@
           </div>
           <div class="col-lg-6"><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d944.1796577133288!2d69.20366989998541!3d41.28584959888752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE3JzA4LjgiTiA2OcKwMTInMTMuMCJF!5e0!3m2!1sru!2s!4v1702894577118!5m2!1sru!2s" width="557" height="557" style="border:1px solid #149ddd; padding: 0 0 0 -10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="col-lg-6" style="margin: 100px 0 0 300px;">
-            <a type="button" class="btn btn-dark" href="{% url 'contact' %}" style="display: block;  color:#00abfa;font-size: xx-large; border-radius: 50px; border: 20px; border-color: black;"><strong> Kontakt </strong></a>
+
           </div>
+
         </div>
 
       </div>
     </section><!-- End Contact Section -->
+    </section><!-- End Contact Section -->
+    
     <script src="{% static 'assets/js/main.js' %}"></script>
   </main><!-- End #main -->
-{% endblock %} 
 </body>
-
 </html>
+{% endblock %} 
