@@ -24,8 +24,8 @@ def telegram(request):
 def web(request):
     return render(request, 'web.html', {})
 
-def motions(request):
-    return render(request, 'motions.html', {})
+# def motions(request):
+#     return render(request, 'motions.html', {})
 
 
 # @csrf_protect
