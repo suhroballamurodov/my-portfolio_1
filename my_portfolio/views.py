@@ -21,8 +21,8 @@ def main(request):
 def telegram(request):
     return render(request, 'telegram.html',{})
 
-def web(request):
-    return render(request, 'web.html',{})
+def web_application(request):
+    return render(request, 'web_application.html',{})
 
 
 # @csrf_protect
