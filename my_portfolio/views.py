@@ -8,24 +8,21 @@ from django.views.generic.edit import CreateView
 from .models import *
 from django.urls import reverse_lazy
 from .serializer import *
-from rest_framework import viewsets, generics
-from django.views.decorators.csrf import csrf_protect
+# from rest_framework import viewsets, generics
+# from django.views.decorators.csrf import csrf_protect
 
 
 def portfolio_details(request):
-    return render(request, 'portfolio_details.html', {})
+    return render(request, 'portfolio_details.html',{})
 
 def main(request):
-    return render(request, 'index.html', {})
+    return render(request, 'index.html',{})
 
 def telegram(request):
     return render(request, 'telegram.html',{})
 
 def web(request):
-    return render(request, 'web.html', {})
-
-# def motions(request):
-#     return render(request, 'motions.html', {})
+    return render(request, 'web.html',{})
 
 
 # @csrf_protect
