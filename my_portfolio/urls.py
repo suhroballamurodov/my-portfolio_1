@@ -15,7 +15,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('contact/success/',contact_success, name='contact_success'),
     path('telegram_bot/', telegram, name='telegram_bot'),
-    path('web_application/', web_application, name='web_application'),
+    # path('web_application/', web_application, name='web_application'),
     # path('motions', views.motions, name='motions'),
     # path('api/', include(router.urls)),  #API uchun link
 ] 

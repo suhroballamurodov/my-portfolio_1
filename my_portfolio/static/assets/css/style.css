@@ -921,9 +921,10 @@ section {
 .contact .info .phone:hover i,
 .contact .info .telegram:hover i,
 .contact .info .instagram:hover i,
-.contact .info .github:hover i{
+.contact .info .github:hover i,
+.contact .info .linkedin:hover i{
   background: #149ddd;
-  color: #bbbbbb;
+  color: #ffffff;
 }
 
 .contact .php-email-form {
